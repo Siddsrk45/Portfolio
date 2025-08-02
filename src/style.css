@@ -1,0 +1,86 @@
+.navbar-nav .nav-link {
+  color: var(--text-light) !important;
+  padding: 0.8rem 1rem !important;
+  transition: color 0.3s ease;
+}
+.nav-link {
+  padding: 0.8rem 1rem !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-blue) !important;
+}
+.navbar-toggler {
+  background-color: var(--accent-blue); /* or any visible color */
+}
+a svg {
+  color: var(--text-light);
+  transition: transform 0.3s, color 0.3s;
+}
+
+a:hover svg {
+  transform: scale(1.2);
+  color: var(--accent-blue);
+}
+.highlight {
+  color: var(--accent-coral);
+  font-weight: 600;
+}
+
+.glow-on-hover {
+  border: 3px solid transparent;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: border 0.5s, box-shadow 0.5s;
+}
+
+.glow-on-hover:hover {
+  border: 3px solid var(--accent-blue);
+  box-shadow: 0 0 10px var(--accent-blue), 0 0 20px var(--accent-coral);
+}
+/* Scrollbar Styling */
+/* Custom Scrollbar for WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark); /* Matches your background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-blue); /* Main accent */
+  border-radius: 8px;
+  border: 2px solid var(--bg-dark); /* Creates padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-coral); /* On hover */
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-blue) var(--bg-dark);
+}
+.skill-item {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  color: var(--accent-coral);
+  transform: translateX(5px);
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  border: 1px solid var(--accent-blue);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+}
