@@ -11,6 +11,8 @@ import AboutSection from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
 import SkillSection from "./components/SkillSection";
 import ProjectSection from "./components/ProjectSection";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 900, once: false, mirror: true });
@@ -24,6 +26,8 @@ function App() {
       <SkillSection />
       <ExperienceSection />
       <ProjectSection />
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 }

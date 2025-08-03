@@ -10,12 +10,13 @@ import { CgFileDocument } from "react-icons/cg";
 import { Link as ScrollLink } from "react-scroll";
 import "../../src/style.css";
 import resumePDF from "../assets/SiddheshKumbharResume.pdf"; // adjust the path if needed
-
+import useIsMobile from "../Hooks/DeviceCheckHook";
+import { FiMenu, FiX } from "react-icons/fi";
 function AppNavbar() {
   const [expanded, setExpanded] = useState(false);
-
+  const isMobile = useIsMobile();
   const handleNavClick = () => {
-    setExpanded(false); 
+    setExpanded(false);
   };
   return (
     <>
@@ -32,7 +33,16 @@ function AppNavbar() {
           <Navbar.Brand href="#home" style={{ color: COLORS.accent_primary }}>
             Siddhesh
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className="custom-toggle"
+          >
+            {expanded ? (
+              <FiX size={24} color={COLORS.accent_primary} />
+            ) : (
+              <FiMenu size={24} color={COLORS.accent_primary} />
+            )}
+          </Navbar.Toggle>
 
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
@@ -55,7 +65,7 @@ function AppNavbar() {
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={-220}
+                  offset={isMobile ? -370 : -220}
                   onClick={handleNavClick}
                   duration={50}
                   className="nav-link"
@@ -69,7 +79,7 @@ function AppNavbar() {
                   to="skill"
                   spy={true}
                   smooth={true}
-                  offset={-130}
+                  offset={isMobile ? -360 : -130}
                   duration={50}
                   onClick={handleNavClick}
                   className="nav-link"
@@ -84,7 +94,7 @@ function AppNavbar() {
                   spy={true}
                   smooth={true}
                   onClick={handleNavClick}
-                  offset={-200}
+                  offset={isMobile ? -340 : -200}
                   duration={50}
                   className="nav-link"
                 >
@@ -98,7 +108,7 @@ function AppNavbar() {
                   spy={true}
                   onClick={handleNavClick}
                   smooth={true}
-                  offset={-70}
+                  offset={isMobile ? -370 : -70}
                   duration={50}
                   className="nav-link"
                 >

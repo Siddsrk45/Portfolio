@@ -84,3 +84,9 @@ a:hover svg {
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
 }
+
+.custom-toggle {
+  border: none;
+  background: none;
+  padding: 0.5rem;
+}
