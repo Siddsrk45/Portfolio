@@ -52,7 +52,7 @@ function AppNavbar() {
                   spy={true}
                   onClick={handleNavClick}
                   smooth={true}
-                  offset={-70}
+                  offset={isMobile ? -220: -70}
                   duration={50}
                   className="nav-link"
                 >

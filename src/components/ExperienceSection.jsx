@@ -40,7 +40,7 @@ function ExperienceSection() {
           Software Engineer
         </p>
         <p style={{ fontStyle: "italic", color: "gray", marginBottom: "1rem" }}>
-          June 2019 - Present | Mumbai, Maharashtra
+          June 2022 - Present | Mumbai, Maharashtra
         </p>
 
         <ul style={{ lineHeight: "1.8", paddingLeft: "1.2rem" }}>
